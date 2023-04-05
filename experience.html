@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>My Experience - Jace</title>
+    <link rel="icon" type="image/x-icon" href="media/favicon.png">
+    <meta name="description" content="Jace's Website - My Experience">
+    <meta name="author" content="Jace Barrett">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="scripts/script.js"></script>
+    <!--
+      Change log:
+        Created:  24. January 2023
+        Modified: 24. January 2023 - Created changelog and metadata.
+                  31. January 2023 - Added favicon and links to other pages in header.
+                  1. February 2023 - Added paragraphs with description of what I do and a list of accomplishments. Added code snippet of one of my previous projects with download link for full game. Added paragraph of my graphic design experience with a picture of some examples. Added footer with social media links.
+                  2. February 2023 - Added corresponding text next to social media icons in footer. Polished paragraphs and edited titles of paragraphs. Bolded all titles.
+                  3. February 2023 - Removed text next to social media icons in footer. Changed icon size.
+                  23. February 2023 - Added stylesheet.
+                  24. February 2023 - Changed navbar to be thinner and more suited to modern navbar designs.
+                  28. February 2023 - Created table for programming languages and changed font and colors for text on page. Resized image. Changed social media footer to be evenly spaced and changed photos to colorized versions. Customized scrollbar.
+                  02. March 2023 - Changed main font to Inter web font. Added responsiveness by changing most pixel values to % and vw.
+                  06. March 2023 - Added copyright.
+                  27. March 2023 - Added darker color for appropriate selected link name in navbar.
+                  28. March 2023 - Separated thumbnail image collage into 4 seperate images to create an image gallery with clickable hyperlinks to open them.
+                  31. March 2023 - Added settings link in nav bar and added blank modal which pops when link is clicked.
+                  01. April 2023 - On modal: added custom radio boxes with 3 colour pallete options. Added functions to close modal in 3 different ways. Added caption and buttons. 
+                  02. April 2023 - Altered save-settings button to add onclick function which can change to all colour palettes when the button is clicked.
+      -->
+  </head>
+  <body>
+    <header>
+      <div id="nav-head">
+        <h1>JACE</h1>
+        <ul id="nav-bar">
+          <li><a class="nav-links" href="index.html">Home</a></li>
+          <li><a class="nav-links" href="interests.html">Interests</a></li>
+          <li><a id="active" class="nav-links" href="experience.html">Experience</a></li>
+        </ul>
+        <a id="settings" onclick="openSettings()">&#9881; Settings</a>
+      </div>
+    </header>
+    <main>
+      <div id="modal" class="modal">
+        <div class="modal-body">
+          <span class="close-span" onclick="closeModal()">&times;</span>
+          <h4>Settings</h4>
+          <label class="radio-container">Light Mode
+            <input id="light" type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="radio-container">Dim Mode
+            <input id="dim" type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="radio-container">Dark Mode (Default)
+            <input id="dark" type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <button id="save-settings" onclick="settingsButton()">Save Settings</button>
+        </div>
+      </div>
+      <div class="left-img">
+        <img src="media/setup.jpg" alt="A photo of my computer set-up featuring football shirts on my wall, in my room" id="setup">
+        <h2>What I Do</h2>
+        <p>I am a programmer who specializes in HTML and dabbles in Java coding. I have been programming for a little under 3 years now, on and off before I entered university. I have a strong familiarity with CSS and JavaScript along with my HTML experience. I also have experience using many IDEs such as <i>Sublime Text</i>, <i>IntelliJ Idea</i>, <i>Visual Studio Code</i>, as well as coding HTML using only <i>Notepad</i>. In the computer science field, my interests lie in <i>general website design</i>, <i>front-end development</i> and <i>databases</i>.</p>
+      </div>
+      <div class="h2-side">
+        <h2>Accomplishments</h2>
+        <h2>Programming Languages Timeline</h2>
+      </div>
+      <div class="list-and-table">
+        <ul>
+          <li>grade of <b>98</b> in <i>Computer Programming 12</i> Class</li>
+          <li><b>a+</b> grade in CSCI 1105</li>
+          <li>placed <b>5th</b>/54 in Dr. Siegel's Advent of Code 2022</li>
+          <li>created functional video game in <i>HTML/CSS/JS</i></li>
+          <li>created multiple simple HTML websites to perform various tasks</li>
+          <li>used <i>Photoshop</i> to design and create YouTube thumbnails for 6+ years</li>
+          <li>used <i>Photoshop</i> to design large school projects/assignments</li>
+          <li>created simple programs in <i>Java</i></li>
+          <li>edited metadata on 3000+ files in formats such as <i>mp3</i> and <i>m4a</i></li>
+        </ul>
+        <table>
+          <tr>
+            <th>Programming Language</th>
+            <th>Year Which I Started</th>
+          </tr>
+          <tr>
+            <td>HTML</td>
+            <td>2021</td>
+          </tr>
+          <tr>
+            <td>CSS</td>
+            <td>2021</td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+            <td>2021</td>
+          </tr>
+          <tr>
+            <td>Java</td>
+            <td>2022</td>
+          </tr>
+          <tr>
+            <td>C</td>
+            <td>2022</td>
+          </tr>
+        </table>
+      </div>
+      <div class="adjacent-content">
+        <div class="adjacent">
+          <h2>My Programming Language Origins</h2>
+          <p>I first dipped my toes into programming in grade 11. I took a high school computer programming class. In that class, I studied the basics of HTML, CSS and JavaScript. I was very intruiged by it, and I started practicing programming in HTML on my own time and gained skills and proficiency in HTML, CSS and delved deeper into JavaScript. For the final project in my class, I created a <i>'Space-Invaders'</i> clone. In university, so far I have studied Java for a semester and I have gained the skills to be able to code simple programs. I have also reinforced and learned new HTML and CSS content.</p>
+        </div>
+        <div class="adjacent">
+          <h2>Code Snippet From HTML Game Project</h2>
+          <div id="codeDiv">
+            <code>
+            //output: plays the sound effects<br>
+            function sound( src ) {<br>
+            this.sound = document.createElement("audio");<br>
+            this.sound.src = src;<br>
+            this.sound.setAttribute("preload", "auto");<br>
+            this.sound.setAttribute("controls", "none");<br>
+            this.sound.style.display = "none";<br>
+            document.body.appendChild(this.sound);<br>
+            this.play = function() {<br>
+            this.sound.play();<br>
+            }<br>
+            this.stop = function() {<br>
+            this.sound.pause();<br>
+            }<br>
+            }<br>
+            //INPUT: triggers readKeypress when someone presses a key down<br>
+            window.onkeydown = readKeypress;<br>
+            }<br>
+            //OUTPUT: changes the color of the text<br>
+            var changeText = function() {<br>
+            var newTextColor = document.getElementById("inputLineId").value;<br>
+            var scoreColor = document.getElementsByClassName("score");<br>
+            for (var i = 0; i &lt; scoreColor.length; i++) {<br>
+            scoreColor[i].style.color = newTextColor;<br>
+            }<br>
+            var controlsColor = document.getElementsByClassName("controlsGuide");<br>
+            for (var i = 0; i &lt; controlsColor.length; i++) {<br>
+            controlsColor[i].style.color = newTextColor;<br>
+            }<br>
+            document.querySelector("th").style.color = newTextColor;<br>  
+            document.getElementById("headerScore").style.color = newTextColor;<br>
+            document.getElementById("textColorPId").style.color = newTextColor;<br>
+            document.getElementById("backgroundColorPId").style.color = newTextColor;<br>
+            document.getElementById("inputLineId").style.color = newTextColor;<br>
+            document.getElementById("inputBoxId").style.color = newTextColor;<br>
+            document.getElementById("copyrightId").style.color = newTextColor;<br>
+            }
+            </code>
+            <p id="dl-link"><small><i>Full game download link: <a href="https://drive.google.com/file/d/1BR33oVEzPPR20Fd8MRwx8IzXKQmHKoYb/view?usp=sharing" target="_blank" rel="noreferrer noopener">Space Shooters Game (.zip file)</a></i></small></p>
+          </div>
+        </div>
+      </div>
+      <div class="right-img">
+        <img id="thumbnails" src="media/graphicdesign.jpg" alt="A photo of some thumbnails I created for my YouTube channel">
+        <div class="gallery">
+          <a target="_blank" href="media/designgallery1.jpg">
+          <img src="media/designgallery1.jpg" alt="Photo of Jace best packs of FIFA 22 thumbnail">
+          </a>
+          <a target="_blank" href="media/designgallery2.jpg">
+          <img src="media/designgallery2.jpg" alt="Photo of Jace FIFA 22 PC Road to Glory episode 1 thumbnail">
+          </a>
+          <a target="_blank" href="media/designgallery3.jpg">
+          <img src="media/designgallery3.jpg" alt="Photo of Jace FIFA 21 best moments thumbnail">
+          </a>
+          <a target="_blank" href="media/designgallery4.jpg">
+          <img src="media/designgallery4.jpg" alt="Photo of Jace comeback thumbnail">
+          </a>
+        </div>
+        <h2>Graphic Design Experience</h2>
+        <p>I have been using Photoshop to create thumbnails for my YouTube channel for over half a decade, and thus, I have improved my proficiency with Photoshop as time went on. I am now very familiar with the program and can create large multi-layer projects. My main focus when designing is attention-grabbing and colourful designs. I have also used Photoshop for school assignments in the past to elevate them to the next level.</p>
+      </div>
+    </main>
+    <footer>
+      <div class="media">
+        <a href="https://www.linkedin.com/in/jacexy/" target="_blank" rel="noreferrer noopener"><img src="media/linkedin.png" alt="LinkedIn logo"></a>
+        <a href="mailto:Jace@dal.ca"><img src="media/email.png" alt="Generic email icon"></a>
+        <a href="https://twitter.com/jacexyy" target="_blank" rel="noreferrer noopener"><img src="media/twitter.png" alt="Twitter logo"></a>
+        <a href="https://www.youtube.com/jacexy" target="_blank" rel="noreferrer noopener"><img src="media/youtube.png" alt="YouTube logo"></a>
+      </div>
+      <div class="copyright">
+        <p id="copyright-p">&copy; 2023 Jace Inc.</p>
+      </div>
+    </footer>
+  </body>
+</html>
