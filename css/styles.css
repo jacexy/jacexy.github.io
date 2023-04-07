@@ -972,6 +972,10 @@ button:hover {
 		margin-top: 0vw;
 		font-size: 2.6vw;
 	}
+	
+	#hero-text {
+		left: 28vw;
+	}
 }
 
 /* Classes for different color palettes */
