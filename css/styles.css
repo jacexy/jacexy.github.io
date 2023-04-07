@@ -974,7 +974,8 @@ button:hover {
 	}
 	
 	#hero-text {
-		left: 28vw;
+		margin-left: 0vw;
+		left: 27.8vw;
 	}
 }
 
