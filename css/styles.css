@@ -920,7 +920,7 @@ button:hover {
 
 	#settings {
 		margin-right: 1.5vw;
-		font-size: 4vw;
+		font-size: 3.5vw;
 	}
 
 	.left-iframe > iframe {
@@ -971,6 +971,11 @@ button:hover {
 	button {
 		margin-top: 0vw;
 		font-size: 2.6vw;
+	}
+	
+	#hero-text {
+		margin-left: 0vw;
+		left: 27.8vw;
 	}
 }
 
