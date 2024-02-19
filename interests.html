@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Home - Jace</title>
+    <title>My Interests - Jace</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <meta name="description" content="Jace's Website - Home">
+    <meta name="description" content="Jace's Website - My Interests">
     <meta name="author" content="Jace Barrett">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles.css">
@@ -13,21 +13,20 @@
       Change log:
         Created:  24. January 2023
         Modified: 24. January 2023 - Created changelog and metadata.
-                  31. January 2023 - Added favicon and links to other pages in header. Added photo of myself with description. Added audio clip for name pronounciation and email link. Added footer with social media links.
+                  31. January 2023 - Added favicon and links to other pages in header.
+                  1. February 2023 - Added paragraph about football along with an older video of me playing football. Added a paragaph about FIFA and added a YouTube video of a recent feat in the game. Added paragraph about video creation and added a screenshot of my YouTube channel.
                   2. February 2023 - Added corresponding text next to social media icons in footer. Bolded all titles.
                   3. February 2023 - Removed text next to social media icons in footer. Changed icon size.
                   23. February 2023 - Added stylesheet.
                   24. February 2023 - Changed navbar to be thinner and more suited to modern navbar designs.
                   28. February 2023 - Changed social media footer to be evenly spaced and changed photos to colorized versions. Customized scrollbar.
-                  29. February 2023 - Changed text font and colors for only top half of page.
-                  01. March 2023 - Changed text font and colors for entire page. Increased width of audio bar.
                   02. March 2023 - Changed main font to Inter web font. Added responsiveness by changing most pixel values to % and vw.
                   06. March 2023 - Added copyright.
-                  07. March 2023 - Added email form. Added ordered list of all programming languages that I use.
-                  27. March 2023 - Changed input box for email to textarea. Added alert to display upon pressing email button. Added darker color for appropriate selected link name in navbar.
+                  27. March 2023 - Added darker color for appropriate selected link name in navbar.
                   31. March 2023 - Added settings link in nav bar and added blank modal which pops when link is clicked.
                   01. April 2023 - On modal: added custom radio boxes with 3 colour pallete options. Added functions to close modal in 3 different ways. Added caption and buttons. 
                   02. April 2023 - Altered save-settings button to add onclick function which can change to all colour palettes when the button is clicked.
+                  19. February 2024 - Updated YouTube video imbed link.
       -->
   </head>
   <body>
@@ -35,8 +34,8 @@
       <div id="nav-head">
         <h1>JACE</h1>
         <ul id="nav-bar">
-          <li><a id="active" class="nav-links" href="index.html">Home</a></li>
-          <li><a class="nav-links" href="interests.html">Interests</a></li>
+          <li><a class="nav-links" href="index.html">Home</a></li>
+          <li><a id="active" class="nav-links" href="interests.html">Interests</a></li>
           <li><a class="nav-links" href="experience.html">Experience</a></li>
         </ul>
         <a id="settings" onclick="openSettings()">&#9881; Settings</a>
@@ -62,47 +61,23 @@
           <button id="save-settings" onclick="settingsButton()">Save Settings</button>
         </div>
       </div>
-      <div id="hero-container">
-        <img id="hero" src="media/banner.jpg" alt="Hero image of my YouTube channel's banner">
+      <div class="right-vid">
+        <video controls poster="media/thumbnail.png">
+          <source src="media/football.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <h2>Football</h2>
+        <p>I've had an interest in the sport of football (soccer) for around a decade. I played at a low level from 2014-2018 for <a href="http://www.halifaxcitysoccerclub.ns.ca/" target="_blank" rel="noreferrer noopener">Halifax City Soccer Club</a>. After quitting playing club football at my local team, I began to watch my supported global club, <a href="https://fcbayern.com/" target="_blank" rel="noreferrer noopener">FC Bayern Munich</a>, more and more. Since then, I have played a bit of football with friends in gym classes and for YouTube videos, but I mainly watch the sport now instead of play.</p>
       </div>
-      <div id="hero-text">
-        <h3>Welcome to my website!</h3>
-        <button id="tala" onclick="jumpToContent()">Take a Look Around!</button>
+      <div class="left-iframe">
+        <iframe src="https://www.youtube.com/watch?v=9DNj3RffsEg"></iframe>
+        <h2>FIFA (Video Game)</h2>
+        <p>I have a love-hate relationship with the FIFA video game series, but I cannot get away from the game. I have played every title since FIFA 15 and it is by far my most played video game. It combines my love for football with my enjoyment of playing video games into one <small>(poorly made)</small> video game. I've always told myself that if I got into video game development, I would try to work at EA Sports in an attempt to make the FIFA video game series more playable and polished.</p>
       </div>
-      <div class="left-img">
-        <img id="me-photo" src="media/jacephoto.jpg" alt="A photo of me holding my dog, standing in front of the City Hall of Quebec City">
-        <h2>About Me</h2>
-        <p>My name is <b>Jace Barrett</b> <i>(he/him)</i> and I am currently a second-year <i>Applied Computer Science</i> student at <a href="https://www.dal.ca/" target="_blank" rel="noreferrer noopener">Dalhousie University</a>. My primary experience is in the programming languages <i>HTML</i>, <i>CSS</i>, <i>JavaScript</i> and <i>Java</i>. My interests in the computer science field are mainly website development and databases. I am an avid football fan who likes to watch as many <a href="https://fcbayern.com/" target="_blank" rel="noreferrer noopener">FC Bayern Munich</a> games as I can. I also have an interest in graphic design and video creation. I have been creating videos on YouTube for over 10 years and I have made my own thumbnails in <i>Photoshop</i> for around 7 years.</p>
-      </div>
-      <div class="adjacent-content">
-        <div class="adjacent-index">
-          <h2>Name Pronounciation</h2>
-          <audio controls>
-            <source src="media/myname.mp3" type="audio/mpeg">
-            Your browser does not support the audio tag.
-          </audio>
-        </div>
-        <div class="adjacent-index">
-          <h2>Send Me an Email</h2>
-          <form action="mailto:Jace@dal.ca">
-            <label class="email" for="subject">Email Subject</label>
-            <textarea id="subject" name="subject" placeholder="Subject of the email"></textarea>
-            <input onclick="emailAlert()" type="submit" value="Open Mail App">
-          </form>
-        </div>
-      </div>
-      <div class="left-content">
-        <div class="left-ol">
-          <h2>All Programming Languages I Use</h2>
-          <ol>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Java</li>
-            <li>C</li>
-            <li>SQL</li>
-          </ol>
-        </div>
+      <div class="right-img">
+        <img id="channel-ss" src="media/channel.jpg" alt="A screenshot of my YouTube channel">
+        <h2>Video Creation</h2>
+        <p>I have been creating videos on YouTube since 2013 when I began recording myself playing with LEGO. I then expanded into video games in 2015 when I created my new, and current channel. I started editing my videos in Windows Movie Maker, and then Sony Vegas. I uploaded over 500 videos to the "Jace" channel, though I deleted over 400 of them in recent years due to me only wanting to publish content that I genuinely enjoy. After 7 years, I have accumulated nearly 16 000 subscribers and over 8 million video views. As of today, I currently don't upload to my channel regularly, but my love for video creation still remains.</p>
       </div>
     </main>
     <footer>
